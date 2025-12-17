@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopGhana | Terms & Privacy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; color: #000; }
+        h2 { font-size: 22px; font-weight: 600; margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+        .last-updated { color: #666; font-size: 14px; margin-bottom: 40px; }
+        .badge { display: inline-block; background: #e0f2f1; color: #00796b; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 20px; }
+        p { margin-bottom: 16px; }
+        ul { margin-bottom: 16px; padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        footer { margin-top: 50px; text-align: center; color: #999; font-size: 13px; }
+        .tab-buttons { margin-bottom: 30px; display: flex; gap: 10px; }
+        .btn { padding: 10px 20px; border-radius: 6px; border: 1px solid #ddd; background: #fff; cursor: pointer; font-weight: 600; }
+        .btn.active { background: #333; color: #fff; border-color: #333; }
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Legal Information</h1>
+    <div class="last-updated">Effective Date: December 2025</div>
+
+    <div class="tab-buttons">
+        <button class="btn active" onclick="showTab('terms')">Terms of Service</button>
+        <button class="btn" onclick="showTab('privacy')">Privacy Policy</button>
+    </div>
+
+    <div id="terms" class="content-section active">
+        <span class="badge">TERMS OF SERVICE</span>
+        <h2>1. About ShopGhana</h2>
+        <p>ShopGhana is a Ghanaian e-commerce platform that enables local businesses to create online stores within minutes. The service is free with no account fees for basic store creation and operation.</p>
+
+        <h2>2. Prohibited Items (Strictly Enforced)</h2>
+        <p>To maintain a safe environment for all users, the following items are strictly prohibited for sale on ShopGhana:</p>
+        <ul>
+            <li>Illegal drugs, narcotics, or prescription-only medications.</li>
+            <li>Weapons, firearms, ammunition, or explosives.</li>
+            <li>Adult content, pornography, or sexually explicit services.</li>
+            <li>Counterfeit goods, replicas, or pirated software/media.</li>
+            <li>Stolen property or items obtained through fraudulent means.</li>
+        </ul>
+        <p>Any store found listing these items will be permanently banned without prior notice.</p>
+
+        <h2>3. Delivery & Logistics</h2>
+        <p>ShopGhana does not manage delivery services. Store owners are responsible for verifying the legitimacy of delivery personnel. ShopGhana takes 0% commission from delivery fees; all delivery payments are between the store, the driver, and the customer.</p>
+
+        <h2>4. Store URLs & App Scope</h2>
+        <p>Store URLs (.me domains) are proprietary to ShopGhana and are accessible only within the mobile application. They are not indexed for public web browsers (Safari/Chrome).</p>
+
+        <h2>5. Compliance & Local Laws</h2>
+        <p>Users must comply with all Ghana Trade Commission regulations. By using this platform, you verify that your business operates within the legal framework of the Republic of Ghana.</p>
+    </div>
+
+    <div id="privacy" class="content-section">
+        <span class="badge">PRIVACY POLICY</span>
+        <h2>Information Collection</h2>
+        <p>We collect your email, phone number, and store details. This data is used strictly to provide the marketplace service and facilitate customer contact.</p>
+
+        <h2>Account & Data Deletion</h2>
+        <p>We respect your right to be forgotten. You can delete your account at any time via the Settings screen in the mobile app.</p>
+        <ul>
+            <li><strong>Immediate Removal:</strong> Upon deletion, your store, product listings, and public URL are deactivated instantly.</li>
+            <li><strong>Permanent Purge:</strong> All personal identifying information is purged from our active systems.</li>
+        </ul>
+
+        <h2>Third-Party Payments</h2>
+        <p>Payments for premium features are handled exclusively via Apple/Google In-App Purchases. ShopGhana does not store your credit card or Mobile Money pin numbers on our servers.</p>
+
+        <h2>Security</h2>
+        <p>We use industry-standard encryption to protect your data. Users are responsible for maintaining the confidentiality of their login credentials.</p>
+    </div>
+
+    <footer>
+        &copy; 2025 ShopGhana. All rights reserved.<br>
+        Built for the Ghanaian Marketplace.
+    </footer>
+</div>
+
+<script>
+    function showTab(tabId) {
+        // Hide all sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        // Deactivate all buttons
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        // Show selected section and button
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
